@@ -1,0 +1,9 @@
+10-1
+２、３、５
+
+10−2
+iphone→Phone→Machine
+
+ElectricCar→Car→Machine
+
+ElectricDictionary→Dictionary→Book
