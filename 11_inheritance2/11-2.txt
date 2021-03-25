@@ -1,0 +1,3 @@
+ア：Asset
+イ：IntangibleAsset
+ウ：Patent
