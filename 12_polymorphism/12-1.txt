@@ -1,0 +1,2 @@
+(1)Swordインスタンス、Item、Sword、Item
+(2)Monster、Slime、Slime、Monster
