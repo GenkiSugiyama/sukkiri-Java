@@ -31,7 +31,7 @@ public class Wizard {
     }
   }
   public String getName(){ return this.name; }
-  public void setString(String name){
+  public void setName(String name){
     if(name == null || name.length() < 3){
       throw new IllegalArgumentException("名前が異常です。");
     }
@@ -39,7 +39,7 @@ public class Wizard {
   }
   public Wand getWand(){ return this.wand; }
   public void setWand(Wand wand){
-    if(!wand){
+    if(wand == null){
       throw new IllegalArgumentException("杖が装備されていません。必ず装備してください。");
     }
     this.wand = wand; }
