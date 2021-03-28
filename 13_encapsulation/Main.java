@@ -13,6 +13,6 @@ public class Main{
     Hero h = new Hero("勇者", 100);
 
     wizard.heal(h);
-    System.out.println(h.getName() + "のHPは、" + h.getHp() + "になった！");
+    System.out.println(h.getName() + "のHPは、" + h.getHp() + "になった");
   }
 }
