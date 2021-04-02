@@ -1,18 +1,36 @@
-
-import java.nio.charset.StandardCharsets;
 public class Main {
   public static void main(String[] args) {
-    // +演算子で文字列を連結するよりもStringBuilderクラスに対してappendメソッドを呼んで連結した方が効率が良い
-    // +演算子による文字列連結は、連結されるたびに内部でインスタンスの破棄、新規生成が行われているため負荷がかかる（Stringクラスはimutableなクラスなのに対してStringBuilderはmutableなクラス）
-    StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < 10000; i++) {
-      sb.append("Java");
-    }
-    // 最後に連結した文字列を取り出してStringインスタンスに格納する
-    String s = sb.toString();
+    String s = "Java";
 
-    String s1 = "Java";
-    byte[] data = s1.getBytes(StandardCharsets.UTF_8);
-    System.out.println(data);
+    // ピリオド：任意の1文字であれば良い
+    // true
+    System.out.println(s.matches(".ava"));
+
+    // アスタリスク：1つまえの文字の0回以上の繰り返し
+    // true
+    System.out.println(s.matches("Ja*va"));
+
+    // 任意の文字の0回以上の繰り返し→どんな文字列も許す
+    System.out.println(s.matches(".*"));
+
+    // 波カッコ：直前の文字をカッコ内の指定回数繰り返す
+    String s1 = "HELLLO";
+    // true
+    System.out.println(s1.matches("HEL{3}O"));
+
+    // 角カッコ：カッコ内のいずれかの文字であること
+    String s2 = "URL";
+    // 渡された文字列が「UR + （T or H or L）」の3文字であればtrue
+    System.out.println(s2.matches("UR[THL]"));
+
+    // 角カッコ内のハイフン：指定範囲のいずれかの文字
+    // 大文字のAからZまでのいずれかの3文字であればtrue
+    System.out.println(s2.matches("[A-Z]{3}"));
+
+    // ハット「^」とダラー「$]：先頭（ハットの次の文字）と末尾（ダラーの直前の文字）の指定
+    String s3 = "badominton";
+    // bから始まりnで終わる任意の長さの文字列であればtrue
+    System.out.println(s3.matches("^b.*n$"));
+
   }
 }
