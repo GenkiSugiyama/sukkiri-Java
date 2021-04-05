@@ -15,5 +15,7 @@ public class Main {
     System.out.println(time2);
     // getTime()で内部のlong値を取り出せる
     System.out.println(time2.getTime());
+    time2.setTime(1600705425827L);
+    System.out.println(time2);
   }
 }
