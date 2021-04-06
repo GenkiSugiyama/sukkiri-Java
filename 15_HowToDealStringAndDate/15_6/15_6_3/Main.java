@@ -13,6 +13,6 @@ public class Main {
     // Dateインスタンスから文字列を生成
     Date now = new Date();
     String s = f.format(now);
-    System.out.println("減災の時刻は" + s + "です");
+    System.out.println("現在の時刻は" + s + "です");
   }
 }
