@@ -16,6 +16,7 @@ public class Main {
     // ZonedDateTimeの生成
     ZonedDateTime z1 = ZonedDateTime.now();
     System.out.println(z1);
+    System.out.println(z1.getZone());
     // 東京時間の「2020年1月2日3時4分5秒6ナノ秒」を指定してZonedDateTimeを取得
     ZonedDateTime z2 = ZonedDateTime.of(2020, 1, 2, 3, 4, 5, 6, ZoneId.of("Asia/Tokyo"));
     System.out.println(z2);
